@@ -1,17 +1,17 @@
-# BlockVector
-    Vetor de tamanho variável limitado, varia seu tamanho em blocos, assim,
+#BlockVector
+```    
+Vetor de tamanho variável limitado, varia seu tamanho em blocos, assim,
 apenas alocando memória necessária com baixo custe de memória extra para 
 o gerenciamento de alocação dinâmica dos blocos
 
-    Um blockVector<int>(10, 100); possui 10 arrays não inicializados, sendo assim,
-cada um apenas usa 8 bytes, cada um destes arrays possui 100 variáveis do tipo 
-definido, neste caso <int>, porém, os array apenas são alocados quando nescessário,
+Um blockVector<int>(10, 100);  possui 10 arrays não inicializados, sendo assim,
+cada um usa apenas 8 bytes, cada um destes arrays possui 100 variáveis do tipo 
+definido, neste caso <int>, porém, os arrays apenas são alocados quando nescessário,
 diminuindo a memória usada.
     Uma boa distribuição entre a quantidade de blocos e o 
 tamanho dos blocos pode tornar este vetor menos caro em relação à minoria em comparação
 a um std::vector.
-
-
+```
 
 
 Exemplos de uso:
