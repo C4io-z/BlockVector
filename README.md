@@ -9,7 +9,7 @@ cada um usa apenas 8 bytes, cada um destes arrays possui 100 variáveis do tipo
 definido, neste caso <int>, porém, os arrays apenas são alocados quando nescessário,
 diminuindo a memória usada.
     Uma boa distribuição entre a quantidade de blocos e o 
-tamanho dos blocos pode tornar este vetor menos caro em relação à minoria em comparação
+tamanho dos blocos pode tornar este vetor menos caro em relação à memoria em comparação
 a um std::vector.
 ```
 
