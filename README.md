@@ -16,7 +16,7 @@ a um std::vector.
 
 Exemplos de uso:
 
-```
+```cpp
 #include "blockVector"
 
 int main(){
