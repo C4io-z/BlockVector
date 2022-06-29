@@ -1,7 +1,7 @@
 #BlockVector
 ```    
 Vetor de tamanho variável limitado, varia seu tamanho em blocos, assim,
-apenas alocando memória necessária com baixo custe de memória extra para 
+apenas alocando memória necessária com baixo custo de memória extra para 
 o gerenciamento de alocação dinâmica dos blocos
 
 Um blockVector<int>(10, 100);  possui 10 arrays não inicializados, sendo assim,
