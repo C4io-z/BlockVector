@@ -1,4 +1,6 @@
-using namespace std;
+#include <iostream>
+#include <cstdlib>
+#include <math.h>
 
 
 template<class T> 
@@ -42,7 +44,7 @@ class blockVector {
         
         int Block = n/block_size;
         int Stack = n%block_size;
-        return (T*)&blocks[Block][Stack];
+        return &blocks[Block][Stack];
     }
     
     void clear(){
