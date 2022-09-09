@@ -1,9 +1,9 @@
 #include <iostream>
-#include <cstdlib>
 #include <math.h>
+#include <cstdlib>
 
 
-template<class T> 
+template<class T>
 class blockVector {
     public:
 
@@ -20,13 +20,13 @@ class blockVector {
         clear();
         delete [] blocks;
     }
-    
+
     T **blocks;
     int _blocks;
     int stack_size;
     int block_stack;
     int block_size;
-    
+
     void push_back(T n){
         if(stack_size+1 > block_size){
              stack_size = 0;
@@ -36,17 +36,17 @@ class blockVector {
         blocks[block_stack][stack_size] = n;
         stack_size++;
     }
-    
+
     T *operator[](int n){
         if(abs(n) >= (block_stack*block_size)+stack_size)return 0;
-        
+
         if(n < 0)n = size()+n;
-        
+
         int Block = n/block_size;
         int Stack = n%block_size;
         return &blocks[Block][Stack];
     }
-    
+
     void clear(){
         for(int i = 0; i < _blocks; i++){
             delete [] blocks[i];
@@ -63,5 +63,10 @@ class blockVector {
     unsigned int size(){
         return (block_stack)*block_size + stack_size;
     }
-    
+    float eficiencia(){
+        return size()/((float)memorySize()/(float)sizeof(T));
+    }
+    unsigned int max_size(){
+        return _blocks*block_size;
+    }
 };
