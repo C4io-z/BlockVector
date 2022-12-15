@@ -18,7 +18,8 @@ class blockVector {
     }
     ~blockVector(){
         clear();
-        delete [] blocks;
+        delete[] blocks[0];
+        delete[] blocks;
     }
 
     T **blocks;
@@ -48,7 +49,7 @@ class blockVector {
     }
 
     void clear(){
-        for(int i = 0; i < _blocks; i++){
+        for(int i = 0; i <= block_stack; i++){
             delete [] blocks[i];
         }
         stack_size = 0;
